@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<h1>Register Here</h1>
+<p>Please fill out this form with the required information</p>
+<form action="/registration" method="post">
+<fieldset>
+<label for="user-name_field">Enter Your User name:
+<input id="user-name_field" type="text" required name="username">
+</label> 
+
+<label for="email_field">Enter your Email:
+<input id="email_field" type="email" required name="email">
+</label>
+
+<label for="password_field">Create your password:
+<input id="password_field" type="password"  required name="password">
+</label>
+
+</fieldset>
+<fieldset>
+<legend> gender:</legend>
+<label for="male"><input type="radio" class="inline" name="gender" id="male" value="male" checked> Male</label>
+<label for="female"><input type="radio" class="inline" name="gender" id="female" value="female"> Female</label>
+<label for="others"><input type="radio" class="inline" name="gender" id="others" value="others"> Others</label>
+</fieldset>
+<fieldset>
+<legend> role:</legend>
+<label for="admin"><input type="radio" class="inline" name="role" id="admin" value="admin" checked> Admin</label>
+<label for="customer"><input type="radio" class="inline" name="role" id="customer" value="customer"> customer</label>
+
+</fieldset>
+<fieldset>
+<label for="address">enter your address<textarea id="address" rows="3" cols="30" name="address"></textarea></label>
+</fieldset>
+<label for="terms-and-conditions"><input class="inline" type="checkbox" id="terms-and-conditions" required>I accept the terms and conditions</label>
+<input type="submit" value="Submit">
+
+
+</form>
+</body>
+</html>
